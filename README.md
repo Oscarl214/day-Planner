@@ -2,8 +2,6 @@
 
 Simple calendar application that allows a user to save events for each hour of the day. This app runs in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
-Currently deployed at GitHub Pages
-
 ## Features
 
 Color-coded time blocks distinguish past in-progress, and upcoming events.
@@ -21,5 +19,7 @@ The condensed format of jQuery allowed me to better organize logic and build the
 
 jQuery
 BootStrap
+
+## Preview
 
 ## Deployed Link
