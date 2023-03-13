@@ -18,7 +18,7 @@ The condensed format of jQuery allowed me to better organize logic and build the
 ## Resources Used
 
 jQuery,
-BootStrap
+BootStrap, DayJS
 
 ## Preview
 
