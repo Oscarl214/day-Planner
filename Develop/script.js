@@ -1,10 +1,10 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-let currentHour = dayjs().format("h"); //hour of the day
-const timeBlockArray = ["9", "10", "11", "12", "1", "2", "3", "4", "5"];
+let currentHour = dayjs().format("HH"); //hour of the day
+const timeBlockArray = ["09", "10", "11", "12", "13", "14", "15", "16", "17"]; //had to change my hours after 12 to military time so class condition statement could work correctly
 let currentDay = $("#currentDay");
-let timeBlock=$(".time-block")
+let timeBlock = $(".time-block");
 let hour9 = $("#hour9");
 let hour10 = $("#hour10");
 let hour11 = $("#hour11");
@@ -52,19 +52,23 @@ $(function () {
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
 
-  for (const id of timeBlockArray) { //for loop that iterates through each id stored in timeBlockArray
-    if (id < currentHour) { // if statement that checks if the id is less than the current JS hour of the day 
+  for (const id of timeBlockArray) {
+    //for loop that iterates through each id stored in timeBlockArray
+    if (id < currentHour) {
+      // if statement that checks if the id is less than the current JS hour of the day
       $(`#${id}`).addClass("past"); // if it is less than add the past class which greys out the time blocks
-    } else if (id === currentHour) { // if id matches current hour of the day than 
-      $(`#${id}`).addClass("present");// set the present class which sets the time block to red
-    } else if (id > currentHour) { //if id is greater than the hour of the day
-      $(`#${id}`).addClass("future"); //set the future class which makes the time block green 
+    } else if (id === currentHour) {
+      // if id matches current hour of the day than
+      $(`#${id}`).addClass("present"); // set the present class which sets the time block to red
+    } else if (id > currentHour) {
+      //if id is greater than the hour of the day
+      $(`#${id}`).addClass("future"); //set the future class which makes the time block green
     }
   }
 
   // TODO: Add code to display the current date in the header of the page.
 
-  let today = dayjs().format("dddd, MMM D, YYYY"); //use dayjs() and set the format to day of the week, month, day, and year 
+  let today = dayjs().format("dddd, MMM D, YYYY"); //use dayjs() and set the format to day of the week, month, day, and year
 
   currentDay.text(today);
 });
