@@ -22,4 +22,8 @@ BootStrap
 
 ## Preview
 
+https://user-images.githubusercontent.com/104389845/224778436-b068662a-cd72-46e0-94ba-06addaec2742.mp4
+
 ## Deployed Link
+
+https://oscarl214.github.io/day-Planner/
